@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import cors from 'cors';
 import express from 'express';
 import http from 'http';
@@ -31,5 +32,5 @@ const worker = (id, disconnect) => {
 };
 
 throng({ worker, count: WORKERS }).catch(e =>
-  console.error(`Error starting "back"`, e)
+  console.error('Error starting "back"', e)
 );
